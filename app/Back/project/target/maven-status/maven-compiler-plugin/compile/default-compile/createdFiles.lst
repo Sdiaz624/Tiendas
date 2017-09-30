@@ -1,0 +1,12 @@
+com\app\config\prueba.class
+com\app\dao\ProductoDao.class
+com\app\serviceImplements\ProductoImp.class
+com\app\service\TiendaService.class
+com\app\beans\Producto.class
+com\app\serviceImplements\TiendaImp.class
+com\app\dao\TiendaDao.class
+com\app\daoImplements\ProductoDaoImpl.class
+com\app\service\ProductoService.class
+com\app\beans\Tienda.class
+com\app\config\AppConfig.class
+com\app\daoImplements\TiendaDaoImpl.class

@@ -1,0 +1,23 @@
+BASE DE DATOS
+1. importar el archivo tiendasadmin.sql con phpmyadmin MYSQL
+CONFIGURAR BACK
+1. abrir un IDE(netbeans,sts)
+2. importar el proyecto que se encuentra en la carpeta BACK
+3. entrar al archivo. la ruta C:\Users\Sergio\Desktop\ejercicio\project\src\main\webapp\WEB-INF\web.xml
+4. modificar el bean dataSource con la url, username y el password  donde fue imporatada la base de datos
+5. compilar con maven utilizando clean compile package
+6. lanzar el servidor (tomcat v7)
+CONFIGURAR FRONT
+1. abrir el IDE(visual studio code)
+2. importar el proyecto que se encuentra en la carpeta FRONT
+3. en la consola del visual studio code ejecutar npm start
+4. para evitar errores de Allow-Control-Allow-Origin instalar el complemento de chrome con el mismo nombre y activarlo
+
+
+LISTO.
+
+Muchas gracias por tenerme en cuenta. Les comento q nunca había trabajo con Spring y con angularjs. Fue una experiencia muy buena
+fue un fin de semana de mucho aprendizaje
+
+
+ 

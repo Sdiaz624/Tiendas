@@ -1,0 +1,60 @@
+<md-expansion-panel >
+    <md-expansion-panel-header>
+        <md-panel-title>
+            Agregar Tienda 
+        </md-panel-title>
+    </md-expansion-panel-header>
+    <md-form-field>
+        <input mdInput #tienda  maxlength="10" placeholder="Nombre Tienda" id="nomtien" >
+    </md-form-field>
+        <button md-raised-button color="primary" (click) = "insTienda(tienda.value)" >Insertar</button>               
+</md-expansion-panel>  
+<md-accordion  *ngFor="let data of myTiendas">
+<md-expansion-panel  (click) = "getProductos(data.id)" >  
+    <md-expansion-panel-header >
+       {{data.nombre}} 
+       <md-icon svgIcon="thumbs-up"></md-icon>
+       <button md-raised-button color="primary" (click) = "updTienda(data.id,tienda.value)" >Actualizar</button>               
+       <md-icon svgIcon="thumbs-up"></md-icon>
+       <button md-raised-button color="primary" (click) ="droptienda(data.id)">Eliminar</button>
+    </md-expansion-panel-header>
+    <table mdSort (mdSortChange)="sortData($event)">
+        <tr>
+            <th md-sort-header="nombre">Nombre</th>
+            <th md-sort-header="descripción">descripción</th>
+            <th md-sort-header="precio">precio</th>
+            <th md-sort-header="eliminar"></th>
+            <th md-sort-header="actualizar"></th>
+        </tr>
+        <tr >
+            <td>
+                <md-form-field >
+                    <input mdInput #nompro  maxlength="10" placeholder="Nombre"> 
+                </md-form-field>
+            </td>
+            <td>
+                <md-form-field >
+                    <input mdInput #despro  maxlength="100" placeholder="Descripción"> 
+                </md-form-field>
+            </td>
+            <td>
+                <md-form-field >
+                    <input mdInput #prepro  maxlength="10" placeholder="Precio"> 
+                </md-form-field>
+            </td>
+            <td><button md-raised-button color="primary" (click) = "insProducto(nompro.value,
+                                                                    despro.value,
+                                                                    prepro.value,
+                                                                    data.id)">Insertar</button></td>
+            <td></td>
+        </tr>
+        <tr *ngFor="let datap of myProductos">
+            <td>{{datap.nombre}}</td>
+            <td>{{datap.descripcion}}</td>
+            <td>{{datap.precio}}</td>
+            <td><button md-raised-button color="primary" (click) ="dropProducto(datap.id)">Eliminar</button></td>
+            <td><button md-raised-button color="primary">Actualizar</button></td>
+        </tr>                        
+    </table>       
+</md-expansion-panel>
+</md-accordion>
